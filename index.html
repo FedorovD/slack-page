@@ -1,13 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./libs/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Slack page</title>
 </head>
+
 <body>
-   <h1>Slack</h1>
+    <div class="main-wrapper">
+
+        <aside class="groups_wrapper">
+            <div class="group">
+                <div class="group_logo group_current">
+                    <img src="./imgs/ais_logo.jpg" alt="ais" width="46px" height="46px">
+                </div>
+                <p class="group_shortcut">
+                    Ctrl+1
+                </p>
+            </div>
+
+            <div class="group">
+                <div class="group_logo">
+                    <img src="./imgs/rolling_scopes.png" alt="ais" width="46px" height="46px">
+                </div>
+                <p class="group_shortcut">
+                    Ctrl+2
+                </p>
+            </div>
+            <div class="group">
+                <div class="group_logo">
+                    <i class="fa fa-plus-square fa-3x add_icon"></i>
+                </div>
+            </div>
+        </aside>
+
+        <div class="current-room_wrapper">
+            <div class="room-title">
+                <p class="room-name">
+                    AIS
+                    <i class="fa fa-angle-down"></i>
+                    <i class="fa fa-bell-o"></i>
+                </p>
+                <p class="own-name">
+                    <i class="online"></i> Ilya Mokin
+                </p>
+            </div>
+            <p class="all-threads">
+                <i class="fa fa-commenting-o"></i> All Threads
+            </p>
+
+            <div class="channels-list_wrapper">
+                <p class="title">Channels
+                    <i class="fa fa-plus-circle"></i>
+                </p>
+                <p class="channel">
+                    <i class="channel-status fa fa-lock"></i>
+                    <span class="channel-name">admins</span>
+                </p>
+                <p class="channel">
+                    <i class="channel-status fa fa-hashtag"></i>
+                    <span class="channel-name">books</span>
+                </p>
+                <p class="channel">
+                    <i class="channel-status fa fa-hashtag"></i>
+                    <span class="channel-name">english</span>
+                </p>
+                <p class="channel">
+                    <i class="channel-status fa fa-hashtag"></i>
+                    <span class="channel-name">general</span>
+                </p>
+                <p class="channel">
+                    <i class="channel-status fa fa-hashtag"></i>
+                    <span class="channel-name">net</span>
+                </p>
+                <p class="channel">
+                    <i class="channel-status fa fa-hashtag"></i>
+                    <span class="channel-name">nodejs</span>
+                </p>
+                <p class="channel">
+                    <i class="channel-status fa fa-lock"></i>
+                    <span class="channel-name">pre_study</span>
+                </p>
+                <p class="channel">
+                    <i class="channel-status fa fa-hashtag"></i>
+                    <span class="channel-name">random</span>
+                </p>
+                <p class="channel">
+                    <i class="channel-status fa fa-hashtag"></i>
+                    <span class="channel-name">study</span>
+                </p>
+            </div>
+
+
+            <div class="direct-messages_wrapper">
+                <p class="title">Direct Messages
+                    <i class="fa fa-plus-circle"></i>
+                </p>
+                <p class="message-to">
+                    <i class="fa fa-heart"></i>
+                    <span class="username">slackbot</span>
+                </p>
+                <p class="message-to">
+                    <i class="online"></i>
+                    <span class="username">Ilya Mokin</span>
+                </p>
+                <p class="message-to">
+                    <i class="online"></i>
+                    <span class="username">Aleksey Novik</span>
+                </p>
+                <p class="message-to">
+                    <i class="online"></i>
+                    <span class="username">Aleksander Mokin</span>
+                </p>
+                <p class="message-to">
+                    <i class="offline fa fa-circle-o"></i>
+                    <span class="username">Aleksey Radkovich</span>
+                </p>
+                <p class="message-to">
+                    <i class="online"></i>
+                    <span class="username">Andrey Likhtar</span>
+                </p>
+                
+                
+                
+            </div>
+
+            <p class="invite-people">
+                <i class="fa fa-plus" aria-hidden="true"></i> Invite People
+            </p>
+
+            <div class="apps_wrapper">
+                <p class="title">Apps
+                    <i class="fa fa-plus-circle"></i>
+                </p>
+            </div>
+
+            <p class="quick-switcher">
+                <i class="fa fa-bars fa-2x"></i>
+            </p>
+
+        </div>
+
+        <div class="main-window_wrapper">
+                <div class="header">
+
+                </div>
+                <div class="messages-wrapper">
+                        
+                    </div>
+        </div>
+
+    </div>
+
 </body>
+
 </html>

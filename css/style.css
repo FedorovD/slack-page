@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Slack-Lato';
+    src: url(../fonts/Slack-Lato.ttf) format('ttf');
+}
+
+.main-wrapper {
+    height: 100vh;
+    display: flex;
+}
+
+aside.groups_wrapper {
+    min-height: 100%;
+    background: #282A29;
+    padding: 0 15px;
+    overflow: auto;
+}
+
+aside.groups_wrapper .group {
+    width: 100%;
+    height: 80px;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+.group .group_logo {
+    width: 46px;
+    margin: 0 auto;
+    border-radius: 5px;
+    opacity: 0.6;
+}
+
+.group .group_logo img {
+    border-radius: 2px;
+}
+
+.group .group_logo i.add_icon {
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.group p.group_shortcut {
+    color: white;
+    opacity: 0.6;
+    font-size: 14px;
+    font-family: Slack-Lato, sans-serif;
+    text-align: center;
+    line-height: 0.1;
+}
+
+.group_current {
+    opacity: 1!important;
+}
+
+.current-room_wrapper {
+    min-width: 220px;
+    min-height: 100%;
+    background: #4D5250;
+    padding: 0 15px;
+    font-family: Slack-Lato, sans-serif;
+    color: white;
+    overflow: auto;
+}
+
+.room-title .room-name {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.room-name .fa-bell-o {
+    float: right;
+    opacity: 0.6;
+}
+
+.room-title .own-name {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+i.online {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: #99D04A;
+}
+i.online {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: #99D04A;
+}
+i.offline {
+    font-size: 12px;
+}
+
+p.all-threads {
+    opacity: 0.6;
+}
+
+.channels-list_wrapper {
+    padding-top: 20px;
+}
+
+.channels-list_wrapper .title {
+    opacity: 0.6;
+}
+
+.title .fa-plus-circle {
+    float: right;
+}
+
+.channels-list_wrapper .channel {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.direct-messages_wrapper {
+    padding-top: 20px;
+}
+.direct-messages_wrapper .title {
+    opacity: 0.6;
+}
+.message-to i.fa-heart {
+    color: #99D04A;
+}
+.direct-messages_wrapper .message-to{
+    opacity: 0.6;
+}
+
+.current-room_wrapper .invite-people {
+    padding-top: 20px;
+    opacity: 0.6;
+}
+.invite-people i.fa-plus {
+    font-size: 12px;
+}
+.apps_wrapper {
+    padding-top: 20px;
+}
+.apps_wrapper .title {
+    opacity: 0.6;
+}
+
+.quick-switcher {
+    opacity: 0.6;
+    text-align: center;
+}
