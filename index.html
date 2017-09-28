@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./imgs/favicon.png" type="image/png">
     <link rel="stylesheet" href="./libs/normalize.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -17,7 +18,7 @@
         <aside class="groups_wrapper">
             <div class="group">
                 <div class="group_logo group_current">
-                    <img src="./imgs/ais_logo.jpg" alt="ais" width="46px" height="46px">
+                    <img src="./imgs/ais_logo.jpg" alt="ais" width="100%" height="100%">
                 </div>
                 <p class="group_shortcut">
                     Ctrl+1
@@ -26,7 +27,7 @@
 
             <div class="group">
                 <div class="group_logo">
-                    <img src="./imgs/rolling_scopes.png" alt="ais" width="46px" height="46px">
+                    <img src="./imgs/rolling_scopes.jpg" alt="ais" width="100%" height="100%">
                 </div>
                 <p class="group_shortcut">
                     Ctrl+2
@@ -78,22 +79,7 @@
                     <i class="channel-status fa fa-hashtag"></i>
                     <span class="channel-name">net</span>
                 </p>
-                <p class="channel">
-                    <i class="channel-status fa fa-hashtag"></i>
-                    <span class="channel-name">nodejs</span>
-                </p>
-                <p class="channel">
-                    <i class="channel-status fa fa-lock"></i>
-                    <span class="channel-name">pre_study</span>
-                </p>
-                <p class="channel">
-                    <i class="channel-status fa fa-hashtag"></i>
-                    <span class="channel-name">random</span>
-                </p>
-                <p class="channel">
-                    <i class="channel-status fa fa-hashtag"></i>
-                    <span class="channel-name">study</span>
-                </p>
+
             </div>
 
 
@@ -125,9 +111,9 @@
                     <i class="online"></i>
                     <span class="username">Andrey Likhtar</span>
                 </p>
-                
-                
-                
+
+
+
             </div>
 
             <p class="invite-people">
@@ -147,12 +133,87 @@
         </div>
 
         <div class="main-window_wrapper">
-                <div class="header">
+            <div class="header">
+                <div class="info">
+                    <p class="room-name">
+                        #study
+                    </p>
+                    <p class="stat">
+                        &nbsp;
+                        <i class="fa fa-star-o"></i> | &nbsp;
+                        <i class="fa fa-user-o">14</i> | &nbsp;
+                        <i class="fa fa-thumb-tack">20</i> | &nbsp;
+                        <i>Add a topic</i>
+                    </p>
 
                 </div>
-                <div class="messages-wrapper">
-                        
+
+                <div class="control-elements">
+                    <i class="fa fa-phone"></i>
+                    <i class="fa fa-info"></i>
+                    <i class="fa fa-cog"></i>
+                    <input type="text" placeholder="Search">
+                    <i class="fa fa-at"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="channel-wrapper">
+                <div class="msgs-wrapper">
+                    <div class="posts-wrapper">
+                        <div class="day-wrapper">
+                            <div class="date-wrapper">
+                                <div class="date-label">
+                                    <hr class="left"> July 6th, 2017
+                                    <hr class="right">
+                                </div>
+                            </div>
+                            <div class="message-wrapper">
+                                <div class="user-foto-wrapper">
+                                    <img href="https://ca.slack-edge.com/T4W4W11AT-U51FKH46P-g4e8fdd98ce6-48" alt="">
+                                </div>
+                                <div class="username-wrapper">
+                                    Ilya Mokin
+                                    <span class="msg-time">
+                                            11:46 AM
+                                        </span>
+                                </div>
+                                <div class="msg-wrapper">
+                                    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quasi nulla qui velit doloremque. Officiis ut dolorum temporibus sint corporis molestias ex et beatae ratione similique facere labore, aliquid commodi!
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quasi nulla qui velit doloremque. Officiis ut dolorum temporibus sint corporis molestias ex et beatae ratione similique facere labore, aliquid commodi!
+                                     -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="day-wrapper">
+                            <div class="date-wrapper">
+                                <div class="date-label">
+                                    <hr class="left"> July 26th, 2017
+                                    <hr class="right">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="day-wrapper">
+                            <div class="date-wrapper">
+                                <div class="date-label">
+                                    <hr class="left"> Yesterday
+                                    <hr class="right">
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <form class="input-msg-wrapper">
+                        <button class="msg-attach">
+                                <i class="fa fa-plus"></i>
+                        </button>
+                        <input type="text" placeholder="Message #channel">
+                    </form>
+                </div>
+                <aside class="about-channel-wrapper">
+
+                </aside>
+
+            </div>
         </div>
 
     </div>
