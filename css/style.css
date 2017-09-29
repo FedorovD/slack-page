@@ -15,12 +15,14 @@ body {
     height: 100vh;
     display: flex;
     overflow: hidden;
+    justify-content: space-around;
 }
 
 aside.groups_wrapper {
     min-height: 100%;
     background: #282A29;
-    padding: 10px 15px;
+    padding: 10px 10px;
+    padding-top: 25px;
     overflow: auto;
     display: flex;
     align-items: center;
@@ -49,6 +51,7 @@ aside.groups_wrapper .group {
     width: 100%;
     height: 100%;
     color: white;
+    text-align: center;
 }
 
 .group p.group_shortcut {
@@ -64,14 +67,38 @@ aside.groups_wrapper .group {
     opacity: 1!important;
 }
 
+.group .group_logo.group_current::before {
+    content: ' ';
+    display: block;
+    height: 45px;
+    width: 6px;
+    background: #939493;
+    border-radius: 4px;
+    position: absolute;
+    left: -1px;
+}
+
 .current-room_wrapper {
     min-width: 220px;
     min-height: 100%;
     background: #4D5250;
-    padding: 0 15px;
+    /* padding: 0 15px; */
     font-family: Slack-Lato, sans-serif;
     color: white;
     overflow: auto;
+}
+
+.current-room_wrapper .room-title {
+    padding: 0 15px;
+}
+
+.current-room_wrapper .all-threads {
+    line-height: 2;
+    cursor: pointer;
+}
+
+.current-room_wrapper .all-threads:hover {
+    background: #D39B46;
 }
 
 .room-title .room-name {
@@ -97,20 +124,13 @@ i.online {
     background: #99D04A;
 }
 
-i.online {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background: #99D04A;
-}
-
 i.offline {
     font-size: 12px;
 }
 
 p.all-threads {
     opacity: 0.6;
+    padding: 0 15px;
 }
 
 .channels-list_wrapper {
@@ -119,6 +139,7 @@ p.all-threads {
 
 .channels-list_wrapper .title {
     opacity: 0.6;
+    padding: 0 15px;
 }
 
 .title .fa-plus-circle {
@@ -129,11 +150,15 @@ p.all-threads {
 .direct-messages_wrapper .message-to {
     opacity: 0.6;
     cursor: pointer;
+    padding: 0 15px;
+    line-height: 2;
+    margin: 0;
 }
 
 .channels-list_wrapper .channel:hover,
 .direct-messages_wrapper .message-to:hover {
     opacity: 1;
+    background: #D39B46;
 }
 
 .direct-messages_wrapper {
@@ -142,13 +167,16 @@ p.all-threads {
 
 .direct-messages_wrapper .title {
     opacity: 0.6;
+    padding: 0 15px;
 }
 
 .message-to i.fa-heart {
     color: #99D04A;
+    font-size: 0.8em;
 }
 
 .current-room_wrapper .invite-people {
+    padding: 0 15px;
     padding-top: 20px;
     opacity: 0.6;
 }
@@ -158,6 +186,7 @@ p.all-threads {
 }
 
 .apps_wrapper {
+    padding: 0 15px;
     padding-top: 20px;
 }
 
@@ -169,7 +198,9 @@ p.all-threads {
     opacity: 0.6;
     text-align: center;
 }
-
+.quick-switcher:hover {
+    opacity: 1;
+}
 .main-window_wrapper {
     width: 100%;
 }
@@ -207,13 +238,20 @@ p.all-threads {
     opacity: 0.6;
 }
 
-.control-elements i:hover {
+
+/* .control-elements i:hover {
     background: #F2F2F5;
-}
+} */
 
 .control-elements input {
     border: 1px solid gray;
-    border-radius: 2px;
+    border-radius: 3px;
+    outline: none;
+    padding: 6px 8px;
+}
+
+.control-elements input:focus {
+    width: 320px;
 }
 
 .channel-wrapper {
@@ -223,15 +261,16 @@ p.all-threads {
 
 .msgs-wrapper {
     flex-grow: 3;
-    /* background: burlywood; */
 }
 
 .about-channel-wrapper {
     flex-grow: 1;
-    background: azure;
+    min-width: 240px;
+    border-left: 1px solid #F0F0F0;
 }
 
 form.input-msg-wrapper input {
+    outline: none;
     width: 90%;
     padding: 10px 5px;
     margin: 3px 0px;
@@ -244,6 +283,7 @@ form.input-msg-wrapper input {
     flex-direction: column;
     align-items: flex-end;
     position: relative;
+    max-width: 1200px;
 }
 
 .posts-wrapper {
@@ -266,7 +306,32 @@ form.input-msg-wrapper {
 }
 
 form.input-msg-wrapper input {
-    flex-grow: 2;
+    flex-grow: 1;
+}
+
+form.input-msg-wrapper a.inner-input {
+    text-decoration: none;
+    color: #939493;
+    position: absolute;
+}
+
+form.input-msg-wrapper a.at {
+    right: 50px;
+}
+
+form.input-msg-wrapper a.at:hover {
+    color: #36A1E1;
+}
+form.input-msg-wrapper a.smiles:hover {
+    color: #FFCC00;
+}
+
+form.input-msg-wrapper a.smiles {
+    right: 20px;
+}
+
+a.inner-input i.fa {
+    font-size: 1.3em;
 }
 
 form.input-msg-wrapper .msg-attach {
@@ -298,24 +363,18 @@ form.input-msg-wrapper .msg-attach:hover {
     text-align: center;
 }
 
-
-/* .date-wrapper .date-label::before,
-.date-wrapper .date-label::after {
-    content: "";
-    position: relative;
-    display: inline-block;
-    width: 45%;
-    height: 1px;
-    vertical-align: middle;
-    background: gray;
-    background-clip: content-box;
-    border-bottom: 1px solid rgba(255,255,255,.5);
-} */
-
 .date-label hr {
     margin-left: auto;
     margin-right: auto;
     width: 44%;
+}
+
+hr.left,
+hr.right {
+    border: none;
+    color: #F1F1F1;
+    background-color: #F1F1F1;
+    height: 1px;
 }
 
 .left {
@@ -326,8 +385,195 @@ form.input-msg-wrapper .msg-attach:hover {
     float: right;
 }
 
-.message-wrapper .user-foto-wrapper {}
+.message-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 15px;
+}
 
-.message-wrapper .username-wrapper {}
+.message-wrapper .user-photo-wrapper {
+    min-width: 35px;
+    height: 35px;
+}
 
-.message-wrapper .msg-wrapper {}
+.message-wrapper .message-content {
+    padding: 0 5px;
+    font-family: Slack-Lato, sans-serif;
+    color: #2c2d30;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.message-content .message-content_header {
+    font-weight: bold;
+}
+
+.message-content .message-body {}
+
+.message-content_header .msg-time {
+    color: #717274;
+    font-size: 12px;
+    white-space: nowrap;
+    font-weight: 300;
+}
+
+.about-channel-wrapper {
+    overflow: auto;
+}
+
+.about-channel-wrapper .section {
+    padding: 20px 5px;
+    margin: 0;
+    line-height: 0.1;
+}
+
+.section.header {
+    background: #F7F7F7;
+}
+
+.section.header i.fa-times {
+    -webkit-text-stroke: 6px white;
+    opacity: 0.6;
+}
+
+.section.header i.fa-times:hover {
+    opacity: 1;
+    color: #36A1E1;
+}
+
+.section.channel-details,
+.section.hightlights,
+.section.pinned {
+    opacity: 0.6;
+}
+
+.section.hightlights i.fa-star-o {
+    color: #7DC3EC;
+}
+
+.section.pinned i.fa-thumb-tack {
+    color: #FFAD9B;
+}
+
+.section.channel-details i.fa-info-circle,
+.section.hightlights i.fa-star-o,
+.section.pinned i.fa-thumb-tack {
+    font-size: 1.5em;
+}
+
+.section.channel-details i.fa-caret-right,
+.section.hightlights i.fa-caret-right,
+.section.pinned i.fa-caret-down {
+    float: right;
+}
+
+.section.channel-details:hover,
+.section.hightlights:hover {
+    opacity: 1;
+}
+
+.section.active {
+    opacity: 0.8;
+}
+
+ul.pinned-msgs-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: auto;
+    padding: 10px 5px;
+}
+
+ul.pinned-msgs-wrapper li.pinned-msg {
+    list-style: none;
+    border: 2px solid #F3F3F3;
+    border-radius: 3px;
+    padding: 5px 10px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+li.pinned-msg p.file-type {
+    font-size: 13px;
+    color: #717274;
+    line-height: 0.1;
+}
+
+p.stat i.fa-star-o:hover {
+    color: #FFD32F;
+}
+
+.control-elements i.fa {
+    font-size: 1.3em;
+}
+
+p.stat i.fa-user-o:hover,
+p.stat i.fa-thumb-tack:hover,
+.control-elements i.fa-info:hover,
+.control-elements i.fa-cog:hover,
+.control-elements i.fa-ellipsis-v:hover {
+    color: #36A1E1;
+}
+
+.control-elements i.fa-at:hover {
+    color: #DF383F;
+}
+
+.control-elements i.fa-star-o:hover {
+    color: #FFD32F;
+}
+
+p.stat i.topic {
+    padding: 4px;
+}
+
+p.stat i.topic:hover {
+    border: 1px solid #E8E8E8;
+    border-radius: 3px;
+}
+
+
+/* ----------------------- */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px rgba(122, 122, 122, 0.1);
+    /* -webkit-border-radius: 4px;
+    border-radius: 4px; */
+    background: #F3F3F3;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    background: #D9D9DE;
+    -webkit-box-shadow: inset 0 0 1px rgba(122, 122, 122, 0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(227, 227, 230, 0.3);
+}
+
+.current-room_wrapper::-webkit-scrollbar {
+    width: 10px;
+}
+
+.current-room_wrapper::-webkit-scrollbar-track {
+    background: inherit;
+}
+
+.current-room_wrapper::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.45);
+}
+.groups_wrapper::-webkit-scrollbar-track {
+    background: inherit;
+}
