@@ -260,16 +260,22 @@ p.all-threads {
 /* .control-elements i:hover {
     background: #F2F2F5;
 } */
-
+.control-elements form {
+    display: inline-block;
+}
+.control-elements>form i.fa-search{
+    position: absolute;
+}
 .control-elements input {
     border: 1px solid gray;
     border-radius: 3px;
     outline: none;
     padding: 6px 8px;
+    padding-left: 35px;
 }
 
 .control-elements input:focus {
-    width: 320px;
+     animation: stretch  0.3s ease forwards;
 }
 
 .channel-wrapper {
@@ -308,7 +314,7 @@ form.input-msg-wrapper input {
     /* background: coral; */
     width: 100%;
     height: 100%;
-    margin-bottom: 140px;
+    margin-bottom: 128px;
     overflow: auto;
 }
 
@@ -456,7 +462,6 @@ hr.right {
 }
 
 .section.header i.fa-times:hover {
-    opacity: 1;
     color: #36A1E1;
 }
 
@@ -599,4 +604,8 @@ p.stat i.topic:hover {
 
 .groups_wrapper::-webkit-scrollbar-track {
     background: inherit;
+}
+@keyframes 	stretch {
+    from {width: 224px;}
+to {width: 320px;}
 }
