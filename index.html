@@ -190,12 +190,12 @@
                 </div>
 
                 <div class="control-elements">
-                    <i class="fa fa-phone"></i>
-                    <i class="fa fa-info"></i>
+                    <i class="fa fa-phone icon-disabled"></i>
+                    <i class="fa fa-info" id="showChannelDetails"></i>
                     <i class="fa fa-cog"></i>
                     <form>
-                    <i class="fa fa-search"></i>
-                    <input type="text" placeholder="Search">
+                        <i class="fa fa-search"></i>
+                        <input type="text" placeholder="Search">
                     </form>
 
                     <i class="fa fa-at"></i>
@@ -364,7 +364,7 @@
                         <button class="msg-attach">
                                 <i class="fa fa-plus"></i>
                         </button>
-                        <input type="text" placeholder="Message #channel">
+                        <div class="input-msg" data-ph="Message #channel" contenteditable="true"></div>
                         <a href="" class="inner-input at"><i class="fa fa-at"></i></a>
                         <a href="" class="inner-input smiles"><i class="fa fa-smile-o"></i></a>
 
@@ -373,7 +373,7 @@
                 <aside class="about-channel-wrapper">
                     <div class="section header">
                         <h3>About #channel</h3>
-                        <i class="fa fa-times fa-2x"></i>
+                        <i class="fa fa-times fa-2x" id="showChannelDetails"></i>
 
                     </div>
                     <div class="section channel-details">
@@ -407,7 +407,17 @@
         </div>
 
     </div>
-
+    <script>
+        (function () {
+            document.querySelector('.input-msg-wrapper').addEventListener('keyup', function () {
+                document.querySelector('.posts-wrapper').style.marginBottom = 128 +
+                    document.querySelector('.input-msg-wrapper').offsetHeight - 46 + 'px';
+            });
+            document.querySelectorAll('#showChannelDetails').forEach(el => el.addEventListener('click', function () {
+                document.querySelector('aside.about-channel-wrapper').classList.toggle('display-none');
+            }));
+        })();
+    </script>
 </body>
 
 </html>
