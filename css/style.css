@@ -339,7 +339,6 @@ form.input-msg-wrapper {
     bottom: 80px;
 }
 
-
 form.input-msg-wrapper a.inner-input {
     text-decoration: none;
     color: #939493;
@@ -355,6 +354,7 @@ form.input-msg-wrapper a.at {
 form.input-msg-wrapper a.at:hover {
     color: #36A1E1;
 }
+
 form.input-msg-wrapper a.smiles {
     right: 50px;
 }
@@ -362,8 +362,6 @@ form.input-msg-wrapper a.smiles {
 form.input-msg-wrapper a.smiles:hover {
     color: #FFCC00;
 }
-
-
 
 a.inner-input i.fa {
     font-size: 1.3em;
@@ -400,26 +398,22 @@ form.input-msg-wrapper .msg-attach:hover {
     text-align: center;
 }
 
-.date-label hr {
-    margin-left: auto;
-    margin-right: auto;
-    width: 44%;
+.date-label {
+    text-align: center;
 }
 
-hr.left,
-hr.right {
+.date-label .date {
+    background: #FFF;
+    padding: 0px 10px;
+    position: relative;
+    top: -18px;
+}
+
+.date-label hr {
     border: none;
     color: #F1F1F1;
     background-color: #F1F1F1;
     height: 1px;
-}
-
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
 }
 
 .message-wrapper {
@@ -539,9 +533,11 @@ li.pinned-msg p.file-type {
     color: #717274;
     line-height: 0.1;
 }
+
 p.stat i {
     cursor: pointer;
 }
+
 p.stat i.fa-star-o:hover {
     color: #FFD32F;
 }
@@ -633,12 +629,13 @@ p.stat i.topic:hover {
 .display-none {
     display: none;
 }
+
 .icon-disabled {
     opacity: 0.1!important;
 }
 
 @media screen and (max-width: 1280px) {
-.about-channel-wrapper {
-      min-width: 240px;
-  }
+    .about-channel-wrapper {
+        min-width: 240px;
+    }
 }
