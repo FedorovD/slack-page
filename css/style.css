@@ -141,7 +141,7 @@ i.online {
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background: #99D04A;
+    background: #94E864;
 }
 
 i.offline {
@@ -518,9 +518,9 @@ form.input-msg-wrapper .msg-attach:hover {
     font-size: 1.5em;
 }
 
-.section.channel-details i.fa-caret-right,
-.section.hightlights i.fa-caret-right,
-.section.pinned i.fa-caret-down {
+.section.channel-details i.caret,
+.section.hightlights i.caret,
+.section.pinned i.caret {
     float: right;
 }
 
@@ -540,7 +540,6 @@ ul.pinned-msgs-wrapper {
     overflow: auto;
     padding: 10px 5px;
 }
-
 ul.pinned-msgs-wrapper li.pinned-msg {
     list-style: none;
     border: 2px solid #F3F3F3;
@@ -618,6 +617,7 @@ p.stat i.topic:hover {
     padding: 4px;
     border-radius: 3px;
 }
+
 i.topic a.edit-topic {
     display: none;
     padding: 0 5px;
@@ -627,10 +627,12 @@ i.topic a.edit-topic {
     text-decoration: underline;
     cursor: pointer;
 }
+
 p.stat i.topic:hover a.edit-topic,
 a.edit-topic:hover {
     display: inline;
 }
+
 
 /* ----------------------- */
 
@@ -686,7 +688,7 @@ a.edit-topic:hover {
 }
 
 .display-none {
-    display: none;
+    display: none!important;
 }
 
 .icon-disabled {

@@ -399,16 +399,16 @@
                     </div>
                     <div class="section channel-details">
                         <i class="fa fa-info-circle"></i> Channel Details
-                        <i class="fa fa-caret-right"></i>
+                        <i class="fa fa-caret-right caret"></i>
                     </div>
 
                     <div class="section hightlights">
                         <i class="fa fa-star-o"></i> Hightlights
-                        <i class="fa fa-caret-right"></i>
+                        <i class="fa fa-caret-right caret"></i>
                     </div>
                     <div class="section pinned active">
                         <i class="fa fa-thumb-tack"></i> 20 Pinned Items
-                        <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-caret-down caret"></i>
 
                         <ul class="pinned-msgs-wrapper">
                             <li class="pinned-msg">
@@ -441,6 +441,19 @@
                 document.querySelector('aside.about-channel-wrapper').classList.toggle('display-none');
                 activeIcon();
             }));
+
+            document.querySelectorAll('.about-channel-wrapper .section').forEach(el => {
+                el.addEventListener('click', function(){
+                    if(el.classList.contains('active')) {
+                        el.querySelector('.pinned-msgs-wrapper').classList.toggle('display-none');
+                        el.querySelector('.caret').classList.toggle('fa-caret-down');
+                        el.querySelector('.caret').classList.toggle('fa-caret-right');
+                    }else {
+                        alert(1);
+                    }
+                     
+                });
+            });
 
             function activeIcon() {
                 document.querySelector('aside.about-channel-wrapper').classList.contains('display-none') ?
