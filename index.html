@@ -88,6 +88,22 @@
                         <i class="channel-status fa fa-hashtag"></i>
                         <span class="channel-name">net</span>
                     </p>
+                    <p class="channel">
+                        <i class="channel-status fa fa-hashtag"></i>
+                        <span class="channel-name">nodejs</span>
+                    </p>
+                    <p class="channel">
+                        <i class="channel-status fa fa-lock"></i>
+                        <span class="channel-name">pre_study</span>
+                    </p>
+                    <p class="channel">
+                        <i class="channel-status fa fa-hashtag"></i>
+                        <span class="channel-name">random</span>
+                    </p>
+                    <p class="channel">
+                        <i class="channel-status fa fa-hashtag"></i>
+                        <span class="channel-name">study</span>
+                    </p>
 
                 </div>
 
@@ -184,7 +200,10 @@
                         <i class="fa fa-star-o"></i> | &nbsp;
                         <i class="fa fa-user-o">14</i> | &nbsp;
                         <i class="fa fa-thumb-tack">20</i> | &nbsp;
-                        <i class="topic">Add a topic</i>
+                        <i class="topic">Add a topic
+                            <a class="edit-topic" href="#edit">Edit</a>
+                        </i>
+ 
                     </p>
 
                 </div>
@@ -393,12 +412,12 @@
 
                         <ul class="pinned-msgs-wrapper">
                             <li class="pinned-msg">
-                                    <i class="fa fa-times"></i>
+                                <i class="fa fa-times"></i>
                                 <b>NodeJS_basic_.pptx</b>
                                 <p class="file-type">PowerPoint Presentation</p>
                             </li>
                             <li class="pinned-msg">
-                                    <i class="fa fa-times"></i>
+                                <i class="fa fa-times"></i>
                                 <b>JS.pptx</b>
                                 <p class="file-type">PowerPoint Presentation</p>
                             </li>
@@ -413,13 +432,21 @@
     </div>
     <script>
         (function () {
+            activeIcon();
             document.querySelector('.input-msg-wrapper').addEventListener('keyup', function () {
                 document.querySelector('.posts-wrapper').style.marginBottom = 128 +
                     document.querySelector('.input-msg-wrapper').offsetHeight - 46 + 'px';
             });
             document.querySelectorAll('#showChannelDetails').forEach(el => el.addEventListener('click', function () {
                 document.querySelector('aside.about-channel-wrapper').classList.toggle('display-none');
+                activeIcon();
             }));
+
+            function activeIcon() {
+                document.querySelector('aside.about-channel-wrapper').classList.contains('display-none') ?
+                    document.querySelector('#showChannelDetails').classList.remove('icon-active') :
+                    document.querySelector('#showChannelDetails').classList.add('icon-active');
+            }
         })();
     </script>
 </body>
