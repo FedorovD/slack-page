@@ -127,6 +127,10 @@ aside.groups_wrapper .group {
     opacity: 0.6;
 }
 
+.room-name .fa-bell-o:hover {
+    opacity: 1;
+}
+
 .room-title .own-name {
     font-size: 14px;
     font-weight: 200;
@@ -160,6 +164,7 @@ p.all-threads {
 
 .title .fa-plus-circle {
     float: right;
+    opacity: 0.6;
 }
 
 .channels-list_wrapper .channel,
@@ -185,7 +190,11 @@ p.all-threads {
     opacity: 0.6;
     padding: 0 15px;
 }
-
+.direct-messages_wrapper .title:hover,
+.channels-list_wrapper .title:hover {
+  opacity: 1;
+  cursor: pointer;
+}
 .message-to i.fa-heart {
     color: #99D04A;
     font-size: 0.8em;
@@ -195,8 +204,11 @@ p.all-threads {
     padding: 0 15px;
     padding-top: 20px;
     opacity: 0.6;
+    cursor: pointer;
 }
-
+.current-room_wrapper .invite-people:hover {
+    opacity: 1;
+}
 .invite-people i.fa-plus {
     font-size: 12px;
 }
@@ -204,8 +216,11 @@ p.all-threads {
 .apps_wrapper {
     padding: 0 15px;
     padding-top: 20px;
+    cursor: pointer;
 }
-
+.apps_wrapper:hover .title{
+    opacity: 1;
+}
 .apps_wrapper .title {
     opacity: 0.6;
 }
@@ -455,6 +470,7 @@ form.input-msg-wrapper .msg-attach:hover {
 
 .about-channel-wrapper {
     overflow: auto;
+    cursor: pointer;
 }
 
 .about-channel-wrapper .section {
@@ -526,12 +542,36 @@ ul.pinned-msgs-wrapper li.pinned-msg {
     padding: 5px 10px;
     line-height: 1.5;
     margin-bottom: 5px;
+    position: relative;
+}
+
+ul.pinned-msgs-wrapper li.pinned-msg:hover {
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.15);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.15);
+    box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.15);
 }
 
 li.pinned-msg p.file-type {
     font-size: 13px;
     color: #717274;
     line-height: 0.1;
+}
+
+li.pinned-msg i.fa-times {
+    font-size: 0.8em;
+    opacity: 0.6;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: none;
+}
+
+li.pinned-msg:hover i.fa-times {
+    display: block;
+}
+
+li.pinned-msg i.fa-times:hover {
+    opacity: 1;
 }
 
 p.stat i {
