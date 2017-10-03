@@ -203,14 +203,14 @@
                         <i class="topic">Add a topic
                             <a class="edit-topic" href="#edit">Edit</a>
                         </i>
- 
+
                     </p>
 
                 </div>
 
                 <div class="control-elements">
                     <i class="fa fa-phone icon-disabled"></i>
-                    <i class="fa fa-info" id="showChannelDetails"></i>
+                    <i class="fa fa-info showChannelDetails"></i>
                     <i class="fa fa-cog"></i>
                     <form>
                         <i class="fa fa-search"></i>
@@ -392,23 +392,20 @@
                     </form>
                 </div>
                 <aside class="about-channel-wrapper">
-                    <div class="section header">
+                    <div class="header">
                         <h3>About #channel</h3>
-                        <i class="fa fa-times fa-2x" id="showChannelDetails"></i>
+                        <i class="fa fa-times fa-2x showChannelDetails"></i>
 
                     </div>
-                    <div class="section channel-details">
-                        <i class="fa fa-info-circle"></i> Channel Details
-                        <i class="fa fa-caret-right caret"></i>
-                    </div>
+                    <details class="section channel-details">
+                            <summary><span>&nbsp;Channel Details<i class="fa fa-info-circle"></i></span></summary>
+                    </details>
 
-                    <div class="section hightlights">
-                        <i class="fa fa-star-o"></i> Hightlights
-                        <i class="fa fa-caret-right caret"></i>
-                    </div>
-                    <div class="section pinned active">
-                        <i class="fa fa-thumb-tack"></i> 20 Pinned Items
-                        <i class="fa fa-caret-down caret"></i>
+                    <details class="section hightlights">
+                            <summary><span>&nbsp;Hightlights<i class="fa fa-star-o"></i></span></summary>
+                    </details>
+                    <details class="section pinned active">
+                        <summary><span>&nbsp;20 Pinned Items<i class="fa fa-thumb-tack"></i></span></summary>
 
                         <ul class="pinned-msgs-wrapper">
                             <li class="pinned-msg">
@@ -423,7 +420,7 @@
                             </li>
 
                         </ul>
-                    </div>
+                    </details>
                 </aside>
 
             </div>
@@ -432,34 +429,27 @@
     </div>
     <script>
         (function () {
-            activeIcon();
-            document.querySelector('.input-msg-wrapper').addEventListener('keyup', function () {
-                document.querySelector('.posts-wrapper').style.marginBottom = 128 +
-                    document.querySelector('.input-msg-wrapper').offsetHeight - 46 + 'px';
-            });
-            document.querySelectorAll('#showChannelDetails').forEach(el => el.addEventListener('click', function () {
-                document.querySelector('aside.about-channel-wrapper').classList.toggle('display-none');
-                activeIcon();
-            }));
+            // activeIcon();
+            // document.querySelectorAll('.showChannelDetails').forEach(el => el.addEventListener('click', function () {
+            //     document.querySelector('aside.about-channel-wrapper').classList.toggle('display-none');
+            //     activeIcon();
+            // }));
 
-            document.querySelectorAll('.about-channel-wrapper .section').forEach(el => {
-                el.addEventListener('click', function(){
-                    if(el.classList.contains('active')) {
-                        el.querySelector('.pinned-msgs-wrapper').classList.toggle('display-none');
-                        el.querySelector('.caret').classList.toggle('fa-caret-down');
-                        el.querySelector('.caret').classList.toggle('fa-caret-right');
-                    }else {
-                        alert(1);
-                    }
-                     
-                });
-            });
+            // document.querySelectorAll('.about-channel-wrapper .section').forEach(el => {
+            //     el.addEventListener('click', function () {
+            //         if (el.querySelector('.pinned-msgs-wrapper')) {
+            //             el.querySelector('.pinned-msgs-wrapper').classList.toggle('display-none');
+            //         }
+            //         el.querySelector('.caret').classList.toggle('fa-caret-down');
+            //         el.querySelector('.caret').classList.toggle('fa-caret-right');
+            //     });
+            // });
 
-            function activeIcon() {
-                document.querySelector('aside.about-channel-wrapper').classList.contains('display-none') ?
-                    document.querySelector('#showChannelDetails').classList.remove('icon-active') :
-                    document.querySelector('#showChannelDetails').classList.add('icon-active');
-            }
+            // function activeIcon() {
+            //     document.querySelector('aside.about-channel-wrapper').classList.contains('display-none') ?
+            //         document.querySelector('.showChannelDetails').classList.remove('icon-active') :
+            //         document.querySelector('.showChannelDetails').classList.add('icon-active');
+            // }
         })();
     </script>
 </body>
