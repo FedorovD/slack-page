@@ -322,7 +322,7 @@ p.all-threads {
 
 .about-channel-wrapper {
     flex-grow: 1;
-    min-width: 380px;
+    min-width: 320px;
     border-left: 1px solid #F0F0F0;
 }
 
@@ -346,6 +346,7 @@ form.input-msg-wrapper .input-msg[contentEditable=true]:empty:not(:focus):before
     display: flex;
     flex-direction: column;
     position: relative;
+    min-width: 1px;
 }
 
 .posts-wrapper {
@@ -490,8 +491,11 @@ form.input-msg-wrapper .msg-attach:hover {
     padding: 20px 10px;
     margin: 0;
     line-height: 0.1;
-}
 
+}
+.about-channel-wrapper .section {
+    border-top: 1px solid #E8E8E8;
+}
 .about-channel-wrapper .header {
     background: #F7F7F7;
 }
@@ -518,6 +522,9 @@ details.section summary{
     outline: none;
     opacity: 0.6;
     user-select: none;
+}
+details.section[open] summary {
+    opacity: 0.9;
 }
 summary span {
     display:flex;
