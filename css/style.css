@@ -328,7 +328,7 @@ p.all-threads {
 
 form.input-msg-wrapper .input-msg {
     outline: none;
-    width: 55vw;
+    width: 100%;
     padding: 10px 5px;
     padding-right: 75px;
     border: 2px solid gray;
@@ -361,7 +361,7 @@ form.input-msg-wrapper {
     flex-direction: row;
     padding: 2px 0 15px 15px;
     align-items: initial;
-    width: 99%;
+    width: 100%;
     min-height: 42px;
 }
 
@@ -491,11 +491,12 @@ form.input-msg-wrapper .msg-attach:hover {
     padding: 20px 10px;
     margin: 0;
     line-height: 0.1;
-
 }
+
 .about-channel-wrapper .section {
     border-top: 1px solid #E8E8E8;
 }
+
 .about-channel-wrapper .header {
     background: #F7F7F7;
 }
@@ -514,8 +515,9 @@ form.input-msg-wrapper .msg-attach:hover {
 .section.pinned {
     opacity: 0.6;
 }
-details.section summary{
-    display:flex;
+
+details.section summary {
+    display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
@@ -523,17 +525,21 @@ details.section summary{
     opacity: 0.6;
     user-select: none;
 }
+
 details.section[open] summary {
     opacity: 0.9;
 }
+
 summary span {
-    display:flex;
+    display: flex;
     flex-direction: row-reverse;
     align-items: center;
 }
-details.section:hover summary{
+
+details.section:hover summary {
     opacity: 1;
 }
+
 .section.hightlights i.fa-star-o {
     color: #7DC3EC;
 }
