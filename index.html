@@ -224,6 +224,7 @@
             </div>
             <div class="channel-wrapper">
                 <div class="msgs-wrapper">
+
                     <div class="posts-wrapper">
                         <div class="day-wrapper">
                             <div class="date-wrapper">
@@ -380,7 +381,9 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
+
                     <form class="input-msg-wrapper">
                         <button class="msg-attach">
                                 <i class="fa fa-plus"></i>
@@ -398,14 +401,23 @@
 
                     </div>
                     <details class="section channel-details">
-                        <summary><span>&nbsp;Channel Details<i class="fa fa-info-circle"></i></span></summary>
+                        <summary>
+                            <span><i class="fa fa-info-circle"></i>&nbsp;Channel Details</span>
+                            <i class="fa fa-caret-right"></i>
+                        </summary>
                     </details>
 
                     <details class="section hightlights">
-                        <summary><span>&nbsp;Hightlights<i class="fa fa-star-o"></i></span></summary>
+                        <summary>
+                            <span><i class="fa fa-star-o"></i>&nbsp;Hightlights</span>
+                            <i class="fa fa-caret-right"></i>
+                        </summary>
                     </details>
                     <details class="section pinned active">
-                        <summary><span>&nbsp;20 Pinned Items<i class="fa fa-thumb-tack"></i></span></summary>
+                        <summary>
+                            <span><i class="fa fa-thumb-tack"></i>&nbsp;20 Pinned Items</span>
+                            <i class="fa fa-caret-right"></i>
+                        </summary>
 
                         <ul class="pinned-msgs-wrapper">
                             <li class="pinned-msg">
@@ -449,6 +461,49 @@
             //     document.querySelector('aside.about-channel-wrapper').classList.contains('display-none') ?
             //         document.querySelector('.showChannelDetails').classList.remove('icon-active') :
             //         document.querySelector('.showChannelDetails').classList.add('icon-active');
+            // }
+
+            // initScroll('.posts-wrapper', '#box');
+
+            // function initScroll(contentSelector, scrollSelector) {
+            //     console.log(contentSelector, scrollSelector);
+            //     const d = document;
+            //     let contentHeight = d.querySelector(contentSelector).clientHeight;
+            //     console.log('dd', d.querySelector(contentSelector))
+            //     console.log(contentHeight);
+            //     d.querySelector(contentSelector).classList.overflow = 'hidden';
+            //     let box = d.querySelector(scrollSelector);
+            //     console.log('box', box);
+            //     let boxHeight = box.clientHeight;
+            //     console.log(contentHeight, boxHeight);
+            //         if(contentHeight > boxHeight){
+            //             let scrollBar = document.createElement("div");
+            //                 scrollBar.id = "scr";
+            //                 scrollBar.style.height = (boxHeight*100)/contentHeight + '%';
+            //                 scrollBar.style.visibility = 'visible';
+            //                 console.log(box, scrollBar);
+            //                 box.appendChild(scrollBar);
+            //             box.onscroll = function(){
+            //                 let scrollTop = this.pageYOffset || this.scrollTop;
+            //                 let scrollbarDistance = (100*scrollTop)/contentHeight;
+            //                 scrollBar.style.top = scrollbarDistance+'%';
+            //             };        
+            //             scrollBar.addEventListener('mousedown',function(e){
+            //                 scrollBar.classList.add('active');
+            //                 box.classList.add('select-disable');
+            //                 let shiftY = e.pageY-this.offsetTop;
+            //                 d.addEventListener('mousemove',moveGo);
+            //                 function moveGo(e){
+            //                     let distPx = (e.pageY-shiftY)/boxHeight*contentHeight;
+            //                     box.scrollTop = distPx;
+            //                 }
+            //                 d.addEventListener('mouseup',function(){
+            //                     d.removeEventListener('mousemove',moveGo);
+            //                     scrollBar.classList.remove('active');
+            //                     box.classList.remove('select-disable');
+            //                 });
+            //             });
+            //         };
             // }
         })();
     </script>
