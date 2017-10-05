@@ -132,12 +132,12 @@ aside.groups_wrapper .group {
     margin: 0;
 }
 
-.room-name .fa-bell-o {
+.room-name i.fa-bell-o {
     float: right;
     opacity: 0.6;
 }
 
-.room-name .fa-bell-o:hover {
+.room-name i.fa-bell-o:hover {
     opacity: 1;
 }
 
@@ -318,6 +318,7 @@ p.all-threads {
     padding: 6px 8px;
     padding-left: 35px;
 }
+
 .control-elements input:focus {
     animation: stretch 0.3s ease forwards;
 }
@@ -325,6 +326,10 @@ p.all-threads {
 .channel-wrapper {
     display: flex;
     height: 100%;
+    /* what the fuck?! */
+    flex-grow: 1;
+    height: 1px;
+    /* what the fuck?! */
 }
 
 .msgs-wrapper {
@@ -569,6 +574,10 @@ details.section:hover summary {
     opacity: 1;
 }
 
+details[open] summary {
+    opacity: 1;
+}
+
 .section.hightlights i.fa-star-o {
     color: #7DC3EC;
 }
@@ -786,9 +795,10 @@ i.fa-times {
     }
 }
 
-details[open] ul{
+details[open] ul {
     animation: fadeInDown 0.2s;
 }
+
 @keyframes fadeInDown {
     0% {
         opacity: 0;
@@ -799,6 +809,20 @@ details[open] ul{
         transform: translateY(0);
     }
 }
+
+
+/* for hints */
+
+
+/* .hint--bottom:before {
+    border-bottom-color: black;
+}
+
+[class*="hint--"][data-hint]:after {
+    background: black;
+} */
+
+
 /* -________________________________________________________- */
 
 
