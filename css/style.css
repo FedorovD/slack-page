@@ -318,7 +318,6 @@ p.all-threads {
     padding: 6px 8px;
     padding-left: 35px;
 }
-
 .control-elements input:focus {
     animation: stretch 0.3s ease forwards;
 }
@@ -787,7 +786,19 @@ i.fa-times {
     }
 }
 
-
+details[open] ul{
+    animation: fadeInDown 0.2s;
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-1.25em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* -________________________________________________________- */
 
 
